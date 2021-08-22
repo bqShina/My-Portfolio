@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <link id="theme-style" rel="stylesheet" href="">
+  <title>Shina's Website</title>
+</head>
+<body>
+
+  <section class="s1">
+    <div class="main-container">
+      <div class="greeting-wrapper">
+        <h1>Hi, I'm Shina Qin</h1>
+      </div>
+      <div class="intro-wrapper">
+        <div class="nav-wrapper">
+          <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+          </div>
+          <ul id="navigation">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          
+        </div>
+        <div class="left-column">
+          <img id="profile-pic" src="images/IMG_2316 copy.JPG">
+          <h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+
+          <div id="theme-options-wrapper">
+            <div data-mode="light" id="light-mode" class="theme-dot"></div>
+            <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+            <div data-mode="green"  id="green-mode" class="theme-dot"></div>
+            <div data-mode="purple"  id="purple-mode" class="theme-dot"></div>
+          </div>
+
+          <p id="settings-note">
+            *Theme settings will be saved for <br>your next visit
+          </p>
+        </div>
+        <div class="right-column">
+          <div id="preview-shadow">
+            <div id="preview">
+              <div id="corner-tl" class="corner"></div>
+              <div id="corner-tr" class="corner"></div>            
+              <h3>What I Do</h3>
+              <p>I am a front-end developer who is professional in web development and familiar with HTML, CSS, JavaScript, Node.js and Python.</p>
+              <div id="corner-br" class="corner"></div>
+              <div id="corner-bl" class="corner"></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      
+      <!-- <a href="#about">More</a> -->
+    </div>
+  </section>
+
+  <section class="s2" id="about">
+    <div class="main-container">
+
+      <div class="about-wrapper">
+        <div class="about-me">
+          <h4>More About Me</h4>
+          <p>I thoroughly enjoy doing coding and programming.</p>
+          <p>I can use React and other framework libraries, and I look forward to bringing my passion in this field to create amazing websites.</p>
+
+          <hr>
+
+          <h4>TOP EXPERTISE</h4>
+          <p>A front-end developer with primary focus on React: <a target="_blank" href="Shina's Resume.pdf">Download Resume</a></p>
+
+          <div id="skills">
+            <ul>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Python</li>
+              <li>Node.js</li>
+            </ul>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>API</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+
+        </div>
+
+        
+
+        
+        <div class="social-links">
+          <img src="images/social-media.jpg" alt="">
+          <h3>Find me on Github & LinkedIn</h3>
+          <a href="https://github.com/bqShina" target="_blank" >Github: @bqShina</a>
+          <a href="https://www.linkedin.com/in/xiaohan-shina-qin-26090118b/" target="_blank" >LinkedIn: @ShinaQin</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="s1" id="projects">
+    <div class="main-container">
+      <h3 style="text-align: center;">Some of my past projects</h3>
+      <div class="post-wrapper">
+        <div>
+          <div class="project">
+            <img class="thumbnail" src="images/exchange-rate-calculator.png" alt="">
+            <div class="project-preview">
+              <h6 class="project-title">Exchange Rate Calculator</h6>
+              <div class="project-links">
+                <a href="projects/exchange rate calculator/index.html" target="_blank">View</a>
+                <a href="#">Code</a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="project">
+            <img class="thumbnail" src="images/movie-seat-booking.png" alt="">
+            <div class="project-preview">
+              <h6 class="project-title">Movie Seat Booking</h6>
+              <div class="project-links">
+                <a href="projects/Movie Seat Booking/index.html" target="_blank">View</a>
+                <a href="#">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="project">
+            <img class="thumbnail" src="images/form-valid.png" alt="">
+            <div class="project-preview">
+              <h6 class="project-title">Form Validator</h6>
+              <div class="project-links">
+                <a href="projects/Form Validator/index.html" target="_blank">View</a>
+                <a href="#">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="s2" id="contact">
+    <div class="main-container">
+      <h3 style="text-align: center;">Get In Touch</h3>
+
+      <form action="https://formsubmit.co/bqshina@gmail.com" method="POST" id="contact-form">
+        <label>Name</label>
+        <input class="input-field" type="text" name="name" required>
+        <label>Subject</label>
+        <input class="input-field" type="text" name="subject" >
+        <label>Email</label>
+        <input class="input-field" type="email" name="email" required>
+        <label>Message</label>
+        <textarea class="input-field" name="message"></textarea>
+
+        <input id="submit-btn" type="submit" value="Send">
+      </form>
+      
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
