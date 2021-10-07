@@ -9,7 +9,7 @@ const puppeteer = require('puppeteer');
         deviceScaleFactor: 1
     })
     await page.goto('https://bqshina.github.io/My-Portfolio/');
-    await page.screenshot({ path: 'images/screenshot.png', fullPage: true });
+    await page.screenshot({ path: 'screenshot.png', fullPage: true });
 
     await browser.close();
 })();
