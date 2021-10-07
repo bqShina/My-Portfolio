@@ -1,2 +1,2 @@
 # My-Portfolio
-![Screenshot] (./screenshot.png)
+![Screenshot] (screenshot.png)
