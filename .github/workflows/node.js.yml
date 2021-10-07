@@ -12,15 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     # strategy:
-<<<<<<< HEAD
-    #   matrix:
-    #     node-version: [12.x, 14.x, 16.x]
+    # matrix:
+    # node-version: [12.x, 14.x, 16.x]
     # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-=======
-     # matrix:
-       # node-version: [12.x, 14.x, 16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
->>>>>>> ac0ebcb1b22ba3c6e61d6fd261369bd2d11136fe
 
     steps:
       - uses: actions/checkout@v2
