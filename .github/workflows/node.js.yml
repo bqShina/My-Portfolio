@@ -6,7 +6,7 @@ name: Screenshot Pipeline
 on: [push]
 
 jobs:
-  check-bats-version:
+  update-screenshot:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
