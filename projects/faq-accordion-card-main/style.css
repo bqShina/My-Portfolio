@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+:root {
+  --very-dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --text-vdark-blue: hsl(237, 12%, 33%);
+  --text-dark-blue: hsl(240, 6%, 50%);
+  --divider-color: hsl(240, 5%, 91%);
+}
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 70%;
+  max-width: 1000px;
+  margin: 15% auto;
+  padding: 0;
+  box-shadow: 0px 15px 50px -2px hsla(238, 29%, 16%, 0.397);
+}
+/******************* Images *******************/
+.image {
+  width: 80%;
+  background: url(images/bg-pattern-desktop.svg) 100% 70% no-repeat;
+  background-size: auto;
+  margin-right: 30px;
+  position: relative;
+}
+.box {
+  width: 50%;
+  position: absolute;
+  top: 42%;
+  left: -25%;
+}
+.woman-mobile {
+  display: none;
+}
+.woman-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20%;
+  position: relative;
+}
+.woman-desktop {
+  width: 120%;
+  position: absolute;
+  top: 18%;
+  left: -20%;
+}
+
+/******************* FAQ *******************/
+.faq {
+  padding: 8% 10% 8% 5%;
+  width: 100%;
+}
+h1 {
+  font-size: 30px;
+  margin: 0 0 5% 0;
+  color: var(--text-vdark-blue);
+}
+
+h2,
+.question p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-dark-blue);
+}
+
+.question {
+  padding: 2% 2% 2% 0;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+/**** Collapse ****/
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] ~ p {
+  display: none;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+input[type="checkbox"]:checked ~ p {
+  display: block;
+}
+
+input[type="checkbox"]:checked ~ label h2 {
+  font-weight: 700;
+}
+
+input[type="checkbox"]:checked ~ label .arrow-icon {
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+
+/**** Question part ****/
+label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+label:hover h2 {
+  color: var(--soft-red);
+}
+
+label .arrow-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* transition: 0.2s ease-out; */
+}
+
+@media (max-width: 990px) {
+  main {
+    flex-direction: column;
+    justify-content: center;
+    margin: 30% auto;
+    background: #fff url(images/bg-pattern-mobile.svg) top center no-repeat;
+    background-size: 75%;
+  }
+
+  .woman-mobile {
+    display: block;
+    position: absolute;
+    width: 75%;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .woman-desktop,
+  .box {
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+    background: none;
+    height: 20vh;
+  }
+
+  /******************* FAQ *******************/
+  .faq {
+    padding: 8% 5% 15%;
+  }
+  h1 {
+    text-align: center;
+  }
+  label .arrow-icon {
+    right: 0;
+  }
+  .question {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 790px) {
+  main {
+    margin: 35% auto;
+  }
+  .image {
+    height: 18vh;
+  }
+  .woman-mobile {
+    top: -90%;
+  }
+}
+@media (max-width: 550px) {
+  main {
+    width: 90%;
+    border-radius: 20px;
+  }
+  .image {
+    height: 13vh;
+  }
+
+  .woman-mobile {
+    top: -85%;
+  }
+
+  .faq {
+    padding: 8% 6% 15%;
+  }
+}
+@media (max-width: 375px) {
+  .image {
+    height: 10vh;
+  }
+
+  .woman-mobile {
+    top: -110%;
+  }
+}
