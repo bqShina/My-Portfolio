@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+:root {
+  --light-blue: #66e2dc;
+  --soft-red: #fa7453;
+  --yellow: #ffb964;
+  --white: #fcfaf9;
+  --black: #191826;
+}
+
+body {
+  background: url(assets/bg-pattern-1.svg) 100% -3.5% no-repeat,
+    var(--white) url(assets/bg-main-desktop.png) top center no-repeat;
+  background-size: auto, cover;
+  margin: 0;
+  padding: 0 10%;
+}
+
+main {
+  max-width: 1110px;
+  margin: 62px auto 91px;
+  color: var(--black);
+}
+
+/*********************** Logo ************************/
+header img,
+footer img {
+  width: 146.09px;
+}
+
+/*********************** Intro ************************/
+.intro {
+  width: 80%;
+}
+
+.intro h1 {
+  font-size: 88px;
+  line-height: 88px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  margin: 127.01px 0 40px;
+}
+
+.intro p {
+  font-size: 20px;
+  line-height: 34px;
+  margin: 0;
+}
+
+/*********************** Product ************************/
+.product {
+  background: var(--black) url(assets/bg-pattern-2.svg) 40% -30% no-repeat;
+  background-size: 25%;
+  position: relative;
+  border-radius: 12px;
+  margin: 321px auto 202px;
+  min-height: 600px;
+}
+
+.product > img {
+  width: 25%;
+  min-width: 270.21px;
+  position: absolute;
+  left: 102px;
+  top: -30%;
+}
+
+.product .price-card {
+  width: 40%;
+  min-width: 399px;
+  background-color: var(--soft-red);
+  color: var(--white);
+  border-radius: 12px;
+  position: absolute;
+  right: 95px;
+  bottom: -20%;
+  padding: 58px 5% 48px;
+}
+
+.price-card h2 {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 700;
+  margin: 0 0 22px;
+}
+
+.price-card p {
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 400;
+  margin: 0;
+}
+.price-card .price {
+  display: flex;
+  align-items: center;
+}
+
+.price-card h1 {
+  font-size: 65px;
+  line-height: 52px;
+  margin: 39px 16px 46px 0;
+  display: inline-block;
+}
+
+.price-card small {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+}
+
+.price-card button {
+  cursor: pointer;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.price-card button img {
+  margin-right: 7.92px;
+}
+
+.price-card .apple-btn {
+  background-color: var(--black);
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.price-card .apple-btn:hover {
+  background-color: var(--light-blue);
+}
+
+.price-card .android-btn {
+  background-color: var(--white);
+  color: var(--black);
+}
+.price-card .android-btn:hover {
+  background-color: var(--yellow);
+}
+
+/*********************** Product ************************/
+footer {
+  display: flex;
+  justify-content: start;
+}
+footer .copy-social {
+  margin-left: 140px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+footer p span {
+  font-weight: 700;
+}
+footer .copy-social {
+  position: relative;
+  width: 100%;
+}
+footer .social-media {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+footer .social-media a {
+  text-decoration: none;
+}
+footer .social-media svg {
+  width: 20px;
+  margin-left: 20px;
+  fill: var(--black);
+}
+footer .social-media a:hover svg {
+  fill: var(--soft-red);
+}
+
+/*********************** Tablet Mode ************************/
+@media (max-width: 999px) {
+  body {
+    background: url(assets/bg-pattern-1.svg) 105% -3.5% no-repeat,
+      url(assets/bg-main-tablet.png) 95% -30% no-repeat;
+    background-size: 30%, auto;
+    padding: 0 5%;
+  }
+
+  main {
+    margin-bottom: 85px;
+  }
+  .intro {
+    width: 76%;
+  }
+  .intro h1 {
+    font-size: 64px;
+    line-height: 64px;
+    margin: 95.01px 0 28px;
+  }
+  /********** Product **********/
+  .product {
+    margin: 249px 0 183px;
+    background-position: 55% -15%;
+    background-size: 40%;
+  }
+
+  .product > img {
+    left: 64px;
+    top: -138px;
+  }
+
+  .product .price-card {
+    right: 58px;
+    top: 150px;
+    bottom: none;
+    padding: 48px;
+    min-height: 546px;
+  }
+
+  .price-card h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .price-card p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .price-card h1 {
+    margin: 36px 16px 32px 0;
+  }
+  /********** Footer **********/
+  footer {
+    flex-direction: column;
+  }
+  footer .copy-social {
+    margin: 32.01px 0 0;
+  }
+}
+@media (max-width: 760px) {
+  .product {
+    margin-bottom: 283px;
+  }
+  .product .price-card {
+    top: 250px;
+  }
+}
+
+/*********************** Moblie Mode ************************/
+
+@media (max-width: 550px) {
+  body {
+    background: none, url(assets/bg-main-mobile.png) 110% -15% no-repeat;
+    background-size: none, cover;
+    padding: 0;
+  }
+  /********** Intro **********/
+  header img {
+    padding-left: 6.5%;
+  }
+  .intro {
+    padding: 0 6.5%;
+    width: 100%;
+  }
+  .intro h1 {
+    margin: 64.01px 0 40px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .intro p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  /********** Product **********/
+  .product {
+    margin: 166px auto 390px;
+    background-position: top center;
+    background-size: 75%;
+    /* height: ; */
+  }
+  .product > img {
+    width: 55%;
+    min-width: 208.97px;
+    top: -98px;
+  }
+
+  .product > img,
+  .product .price-card {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .product .price-card {
+    top: 64%;
+    width: 100%;
+    min-width: initial;
+    padding: 48px 36px;
+  }
+
+  footer {
+    padding-left: 6.5%;
+  }
+
+  footer .social-media {
+    position: static;
+    top: none;
+    right: none;
+    transform: none;
+    margin-top: 64px;
+  }
+
+  footer .social-media svg {
+    margin: 0 20px 0 0;
+  }
+}
