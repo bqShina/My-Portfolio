@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://bqshina.github.io/My-Portfolio/projects/equalizer-landing-page/index.html](https://bqshina.github.io/My-Portfolio/projects/equalizer-landing-page/index.html)
 
 ## My process
 
