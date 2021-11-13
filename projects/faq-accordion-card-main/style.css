@@ -72,7 +72,7 @@ h1 {
   color: var(--text-vdark-blue);
 }
 
-h2,
+span,
 .question p {
   font-size: 14px;
   font-weight: 400;
@@ -99,7 +99,7 @@ input[type="checkbox"]:checked ~ p {
   display: block;
 }
 
-input[type="checkbox"]:checked ~ label h2 {
+input[type="checkbox"]:checked ~ label span {
   font-weight: 700;
 }
 
@@ -111,11 +111,12 @@ input[type="checkbox"]:checked ~ label .arrow-icon {
 /**** Question part ****/
 label {
   display: block;
+  padding: 10px 0;
   position: relative;
   cursor: pointer;
 }
 
-label:hover h2 {
+label:hover span {
   color: var(--soft-red);
 }
 
