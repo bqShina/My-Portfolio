@@ -48,7 +48,7 @@ Apply checkbox input to create Collapse instead of JavaScript
   <input type="checkbox" name="faq-btn" id="faq1" />
 
   <label for="faq1">
-    <h2>How many team members can I invite?</h2>
+    <span>How many team members can I invite?</span>
     <img class="arrow-icon" src="images/icon-arrow-down.svg" alt="Arrow icon" />
   </label>
   <p>
