@@ -343,7 +343,8 @@ h6 {
   opacity: 0;
 }
 
-.project:hover .project-preview {
+.project:hover .project-preview,
+.project:active .project-preview {
   opacity: 1;
 }
 
