@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-colour: #0079FF;
+    --background-colour: #F6F8FF;
+    --content-background: #FEFEFE;
+    --input-placeholder: #4B6A9B;
+    --mode-colour: #697C9A;
+    --number-colour: #2B3442;
+    --text-colour: #222731;
+}
+
+
+
+/**************************** Main container *****************************/
+main {
+    background-color: var(--background-colour);
+    padding: 144px 0;
+}
+.container {
+    margin: 0 auto;
+
+    min-width: 730px;
+    width: 60%;
+}
+
+/* Font Weight = 700 */
+.logo a, .colour-mode small, .search-bar input[type="submit"]{
+    font-weight: 700;
+}
+
+/**************************** Header *****************************/
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+.logo a, .colour-mode small {
+    color: var(--text-colour);
+}
+
+.logo a {   
+    text-decoration: none;
+    font-size: 26px;
+}
+.colour-mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.colour-mode small::after {
+    content: 'dark';
+}
+.colour-mode:hover small {
+    color: var(--text-colour);
+}
+.colour-mode:hover .moon-icon path {
+    fill: var(--text-colour);
+}
+
+.colour-mode small {
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-right: 16px;
+    color: var(--input-placeholder);
+}
+
+.sun-icon {
+    display: none;
+}
+.search-bar, .github-user {
+    box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.1986);
+    background-color: var(--content-background);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/**************************** Search bar *****************************/
+.search-bar {
+    margin-bottom: 24px;    
+}
+.form-container {
+    position: relative;
+}
+
+.search-bar input[type="search"] {
+    width: 100%;
+    padding: 22px 80px 22px;
+    border: 0;    
+    font-size: 18px;
+    background-color: var(--content-background);
+    color: var(--text-colour);
+    caret-color: var(--primary-colour);
+}
+/* .search-bar input[type="search"]:-internal-autofill-selected {
+    background-color: var(--content-background);
+} */
+.search-bar input[type="search"]:focus {
+    outline: 0;
+}
+
+.search-bar input[type="search"]::placeholder {
+    color: var(--input-placeholder);
+    font-size: 18px;
+}
+
+.search-bar img, .search-bar input[type="submit"], .error-message {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.error-message {
+    color: red;
+    right: 140px;
+    cursor: default;
+    font-weight: 700;
+    display: none;
+}
+
+.search-bar img {
+    left: 32px;   
+}
+
+.search-bar input[type="submit"] {
+    right: 10px;
+    border: 0;
+    background-color: var(--primary-colour);
+    color: #fff;
+    padding: 12.5px 24px;
+    border-radius: 10px;
+}
+.search-bar input[type="submit"]:hover {
+    background-color: #60ABFF;
+}
+
+/**************************** Github user *****************************/
+
+  /*** Profile ***/
+
+.github-user {
+    padding: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.github-user .profile-img {
+    margin-right: 37px;
+}
+.github-user .profile-img img {
+    width: 117px;
+    border-radius: 50%;
+}
+.github-profile {
+    width: 80%;
+}
+.github-profile .profile {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.github-profile .profile h1 {
+    display: inline-block;
+    font-size: 26px;
+}
+
+.github-profile .profile h1, .data-info .data-section h2 {
+    color: var(--number-colour);
+}
+.github-profile .profile small {
+    text-align: end;
+    font-size: 15px;
+    color: var(--mode-colour);
+    padding: 10px 0;
+}
+.github-profile .profile a {
+    color: var(--primary-colour);
+    text-decoration: none;
+}
+
+.github-profile p {
+    margin: 20px 0 32px;
+    font-size: 15px;
+    color: var(--input-placeholder);
+}
+
+/*** Data info ***/
+.github-profile .data-info {
+    background-color: var(--background-colour);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    padding: 15px 32px 17px;
+    margin-bottom: 37px;
+}
+
+.data-info .data-section small {
+    color: var(--input-placeholder);
+    font-size: 13px;
+}
+
+.data-info .data-section h2 {
+    font-size: 22px;
+    line-height: 32.58px;
+}
+
+/*** Social media ***/
+.github-profile .social-media {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+.social-media .social-link:nth-child(-n + 2) {
+    margin-bottom: 15px;
+}
+.social-link a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.social-link a small {
+    color: var(--input-placeholder);
+    margin-left: 16px;
+}
+.social-link .hover small:hover {
+    text-decoration: underline;
+}
+.social-link:first-child a svg {
+    margin-right: 6.5px;
+}
+.social-link a svg {
+    font-size: 15px;
+}
+
+.not-available {
+    opacity: 0.5;
+}
+
+/**************************** tablet mode *****************************/
+@media (max-width: 1000px) {
+    .container {
+        min-width: 573px;
+    }
+
+    /*** Github profile ***/
+    .github-user {
+        padding: 40px;
+        display: block;
+    }
+        
+    .github-user .profile-img {
+        float: left;
+    }
+    .github-user .github-profile .profile {
+        height: 117px;
+        position: relative;
+    }
+    .github-profile {
+        width: 100%;
+    }
+    .github-profile .profile h1, .github-profile .profile a, .github-profile .profile small {
+        position: absolute;
+    }
+    .github-profile .profile h1 {
+        top: 12px;
+    }
+    .github-profile .profile a {        
+        top: 51px;
+    }
+    .github-profile .profile small {
+        bottom: 14px;
+        padding: 0;
+    }
+    .github-profile p {
+        margin-top: 24px;
+    }
+
+}
+
+/**************************** mobile mode *****************************/
+
+@media (max-width:640px) {
+    main {
+        padding-top: 31px;
+    }
+    .container {
+        width: 87.2%;
+        min-width: 327px;
+    }
+}
+@media (max-width:555px) {
+    /*** Header ***/
+    header {
+        margin-bottom: 35px;
+    }
+
+    /*** Search bar ***/
+    .search-bar input[type="search"] {
+        font-size: 13px;
+        padding: 20px 45px;
+    }
+    .search-bar input[type="search"]::placeholder, .error-message {
+        font-size: 13px;
+    }
+    .search-bar img {
+        left: 16px;
+    }
+    .search-bar input[type="submit"] {
+        right: 7px;
+        width: 84px;
+        font-size: 14px;
+        padding: 12.5px 14px;
+    }
+
+    /*** Github profile ***/
+    .github-user {
+        padding: 32px 24px;
+    }
+    .github-user .profile-img {
+        width: 22%;
+    }
+    .github-user .profile-img img {
+        width: 70px;
+    }
+    .github-user .profile-img {
+        margin-right: 19.5px;
+    }
+    .github-user .github-profile .profile {
+        height: 69px;
+    }
+    .github-profile .profile h1 {
+        top: 1px;
+        font-size: 16px;
+    }
+    /* Font Size = 13px */
+    .github-profile .profile a, .github-profile .profile small, .github-profile p {
+        font-size: 13px;
+    }
+    .error-message {
+        right: 100px;
+    }
+
+    .github-profile .profile a {
+        top: 25px;        
+    }
+    .github-profile .profile small {
+        bottom: 0;
+    }
+    .github-profile p {
+        margin: 33px 0 23px;
+    }
+
+    /*** Data Info ***/
+    .github-profile .data-info {
+        padding: 18px 15px;
+    }
+    .github-profile .data-info .data-section {
+        text-align: center;
+    }
+    .data-info .data-section small {
+        font-size: 11px;
+        line-height: 16.29px;
+    }
+    .data-info .data-section h2 {
+        font-size: 16px;
+    }
+    .github-profile .social-media {
+        grid-template-columns: auto;
+    }
+    .social-link a small {
+        margin-left: 13px;
+        font-size: 13px;
+    }
+    .social-media .social-link:nth-child(-n + 3) {
+        margin-bottom: 16px;
+    }
+    
+}

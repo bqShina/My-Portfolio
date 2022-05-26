@@ -1,0 +1,39 @@
+:root {
+    --primary-colour: #0079FF;
+    --background-colour: #141D2F;
+    --content-background: #1E2A47;
+    --input-placeholder: #FFFFFF;
+    --mode-colour: #FFFFFF;
+    --number-colour: #FFFFFF;
+    --text-colour: #FFFFFF;
+}
+
+.moon-icon {
+    display: none;
+}
+
+.sun-icon {
+    display: inline-block;
+}
+
+.colour-mode small::after {
+    content: 'light';
+}
+
+.colour-mode:hover small {
+    color: #90A4D4;
+}
+
+.colour-mode:hover .sun-icon path {
+    fill: #90A4D4;
+}
+/**************************** Search bar *****************************/
+.search-bar,
+.github-user {
+    box-shadow: none;
+}
+
+/*** Social media ***/
+.social-link a svg path {
+    fill: var(--text-colour);
+}
