@@ -6,7 +6,7 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="stylesheet" href="styles/style.css">
-    <link id="theme-style" rel="stylesheet" href="">
+    <link id="theme-style" rel="stylesheet" href="#">
     <link rel="stylesheet" href="styles/dark.css" media="(prefers-color-scheme: dark)">
     <title>GitHub user search app</title>
   </head>
@@ -39,19 +39,19 @@
           </div>
         </header>
         
-        <section class="search-bar">
-          <form action="" id="search-user">
+        <div class="search-bar">
+          <form id="search-user">
             <div class="form-container">
-              <input type="search" name="" id="search" placeholder="Search GitHub username…">
+              <input type="search" id="search" placeholder="Search GitHub username…">
               <img src="assets/icon-search.svg" alt="search-icon">
               <small class="error-message" id="error-message">No results</small>
               <input id="search-btn" type="submit" value="Search">
             </div>             
           </form>
     
-        </section>
+        </div>
         
-        <section class="github-user" id="github-user">
+        <div class="github-user" id="github-user">
           <div class="profile-img">
             <img src="" alt="profile-image">
           </div>
@@ -136,7 +136,7 @@
 
             </div>
           </div>                        
-        </section>
+        </div>
 
       </div>            
     </main>

@@ -18,10 +18,10 @@ const socialSmalls = document.querySelectorAll('.social-link a small');
 const firstUser = 'Octocat';
 
 function switchTheme() {
-    if (themeStyle.getAttribute("href") == "") {
+    if (themeStyle.getAttribute("href") == "#") {
         themeStyle.href = 'styles/dark.css';
     } else {
-        themeStyle.href = '';
+        themeStyle.href = '#';
     }
 }
 
@@ -100,6 +100,9 @@ function getGithubUser(username) {
                             case 0:
                                 socialMedias[i].href = `https://twitter.com/${socialList[i]}`;
                             case 1:
+                                if (socialList[i].includes(' ')) {
+                                    socialList[i].replaceAll(' ', '+');
+                                }
                                 socialMedias[i].href = `https://www.google.com/maps/place/${socialList[i]}`;
                                 break;
                             case 2:
