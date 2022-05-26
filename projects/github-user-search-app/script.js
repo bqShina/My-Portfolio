@@ -60,9 +60,7 @@ function getGithubUser(username) {
             if(data['message'] === 'Not Found') {
                 errorMessage.style.display = 'inline-block';
             } else {
-                console.log(data);
-                localStorage.setItem('currentUser', username);
-                console.log(localStorage.getItem('currentUser'));
+
                 if(errorMessage.style.display = 'inline-block') {
                     errorMessage.style.display = 'none';
                 }
@@ -100,10 +98,11 @@ function getGithubUser(username) {
                             case 0:
                                 socialMedias[i].href = `https://twitter.com/${socialList[i]}`;
                             case 1:
+                                let locationCode = '';
                                 if (socialList[i].includes(' ')) {
-                                    socialList[i].replaceAll(' ', '+');
+                                    locationCode = socialList[i].replaceAll(/\s/g, '+');
                                 }
-                                socialMedias[i].href = `https://www.google.com/maps/place/${socialList[i]}`;
+                                socialMedias[i].href = `https://www.google.com/maps/place/${locationCode}`;
                                 break;
                             case 2:
                                 socialMedias[i].href = socialList[i];
